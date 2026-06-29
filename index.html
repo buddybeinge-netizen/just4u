@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Message</title>
+<style>
+body{margin:0;background:linear-gradient(135deg,#111,#3b0a2a);color:white;font-family:Georgia,serif;display:flex;justify-content:center;align-items:center;height:100vh;text-align:center;padding:20px}
+.card{max-width:700px}
+h1{font-size:42px;color:#ffd700}
+button{padding:12px 24px;margin:10px;font-size:18px;border:none;border-radius:25px;cursor:pointer;background:#ffd700}
+.page{display:none}
+.active{display:block}
+</style>
+</head>
+<body>
+<div class="card">
+  <div id="p1" class="page active">
+    <h1>Ek baat bolu? ❤️</h1>
+    <button onclick="next(2)">Yes</button>
+    <button onclick="next(2)">No</button>
+  </div>
+  <div id="p2" class="page">
+    <h1>Tum bahot cute ho..? 😊</h1>
+    <button onclick="next(3)">Bataau</button>
+    <button onclick="next(3)">Nhi</button>
+  </div>
+  <div id="p3" class="page">
+    <h1>P – Priya nahi...</h1>
+    <h1>P for Pagal 😄❤️</h1>
+  </div>
+</div>
+<script>
+function next(n){
+document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+document.getElementById('p'+n).classList.add('active');
+}
+</script>
+</body>
+</html>
